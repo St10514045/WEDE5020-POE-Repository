@@ -1,0 +1,363 @@
+
+/* 
+   2.2  Base Style (CSS Reset & Defaults)
+   */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* Base 16px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fdfbf7; /* Warm off-white */
+    padding: 1rem;
+}
+
+/* 
+   2.3  Typography Styles
+    */
+h1, h2, h3 {
+    color: #5c3a21; /* Rich earthy brown */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+a {
+    color: #a0522d; /* Sienna */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5c3a21;
+    text-decoration: underline;
+}
+
+/* 
+   2.4 Layout Structure 
+   */
+header {
+    background-color: #5c3a21;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+header h1 {
+    color: #ffffff;
+    border-bottom: none;
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: #fdfbf7;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover {
+    background-color: #d4a373;
+    color: #5c3a21;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Products Grid Layout */
+#products ul, .products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+#products li {
+    background-color: #fdfbf7;
+    border: 1px solid #e0d6c8;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Forms Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+fieldset {
+    border: 1px solid #d4a373;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: 700;
+    color: #5c3a21;
+    padding: 0 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0d6c8;
+}
+
+/* 
+   2.5 Apply Visual Styles
+  */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Interactive Elements */
+input[type="submit"],
+input[type="reset"] {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-right: 0.5rem;
+}
+
+input[type="submit"] {
+    background-color: #a0522d;
+    color: #ffffff;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: #5c3a21;
+}
+
+input[type="reset"] {
+    background-color: #e0d6c8;
+    color: #333;
+}
+
+input[type="reset"]:hover,
+input[type="reset"]:focus {
+    background-color: #cbb99f;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid #d4a373;
+    border-color: #d4a373;
+}
+
+/* 
+   3.1 Breakpoints (Media Queries)
+    */
+/* Tablet Breakpoint */
+@media (min-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+
+    #products ul, .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    fieldset {
+        margin-bottom: 0;
+    }
+
+    fieldset:nth-of-type(1) {
+        grid-column: 1 / 2;
+    }
+    
+    fieldset:nth-of-type(2) {
+        grid-column: 2 / 3;
+    }
+
+    form p {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #products ul, .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* About page team layout */
+    #about main section:nth-of-type(4) ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        list-style: none;
+    }
+
+    #about main section:nth-of-type(4) li {
+        background: #fdfbf7;
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid #e0d6c8;
+    }
+}
+
+/* 
+   3.3 Responsive Images
+ */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* About Us Image Layout */
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stacks image and text on mobile */
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about-content img {
+    width: 100%;
+    max-width: 500px; /* Prevents image from getting too huge on desktop */
+    object-fit: cover;
+}
+
+/* Desktop: Image and text side-by-side */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Side by side on tablet/desktop */
+        align-items: flex-start;
+    }
+    
+    .about-content img {
+        flex: 1; /* Image takes up 1 part of the space */
+        max-width: 50%;
+    }
+    
+    .about-text {
+        flex: 1.5; /* Text takes up 1.5 parts of the space */
+    }
+}
